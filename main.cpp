@@ -5,13 +5,13 @@
 
 void listDirContents(QString st) {
     QDir D(st);
-    QFileInfoList L = D.entryInfoList(QDir::Files | QDir::NoDotAndDotDot);//QDir::NoDotAndDotDot);
+    QFileInfoList L = D.entryInfoList(QDir::Files | QDir::NoDotAndDotDot);
     qDebug() << "Files: ";
     for (int i=0; i<L.size(); i++) {
         qDebug() << "\t" << L[i].fileName();
     }
 
-    L = D.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);//QDir::NoDotAndDotDot);
+    L = D.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
     qDebug() << "SubDirs: ";
     for (int i=0; i<L.size(); i++) {
         qDebug() << "\t" << L[i].fileName() ;
